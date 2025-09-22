@@ -1,0 +1,53 @@
+.nav-bar {
+  display: flex; /* Makes the navbar a flex container */
+  justify-content: space-between; /* Spaces items between the logo, menu, and cart */
+  align-items: center; /* Vertically aligns all items */
+  background-color: #333; /* Dark background color */
+  color: white; /* White text color */
+  padding: 1rem 2rem; /* Adds padding on the top/bottom and sides */
+  font-family: Arial, sans-serif;
+}
+
+.nav-logo {
+  margin: 0; /* Removes default margin */
+  font-size: 1.5rem;
+}
+
+.nav-menu {
+  list-style: none; /* Removes bullet points from the list */
+  display: flex; /* Makes menu items a flex container */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin-right: 1.5rem; /* Adds space between menu items */
+  cursor: pointer; /* Changes the cursor to a pointer to indicate interactivity */
+  transition: color 0.3s ease; /* Adds a smooth transition for the hover effect */
+}
+
+.nav-menu li:hover {
+  color: #a0a0a0; /* Changes color on hover */
+}
+
+.nav-cart {
+  /* You can add specific styles for the CartWidget here */
+  /* For example: */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav-cart:hover {
+  transform: scale(1.1); /* Makes the cart icon slightly larger on hover */
+}
+
+/* Optional: To make the layout more responsive for small screens */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column; /* Stacks items vertically on small screens */
+    padding: 1rem;
+  }
+  .nav-menu {
+    margin-top: 1rem;
+  }
+}
