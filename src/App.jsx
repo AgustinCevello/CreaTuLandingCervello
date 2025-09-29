@@ -1,51 +1,42 @@
-import './App.css';
-import NavBar from './components/NavBar'; // Importamos el NavBar
-import ItemListContainer from './components/ItemListContainer'; // Importamos el ItemListContainer
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemListContainer/ItemDetailContainer";
+import "./App.css";
 
 function App() {
-  const usuario = {
-    name: "Lautaro",
-    age: 32,
-    color: "#9342a8ff",
-  };
-
-  function isUserPaymentOK() {
-    return "Todo OK 🥰";
-  }
-
-  const sectionStyles={
-    backgroundColor: usuario.color,
-    padding: "20px",
-    border: "solid 2px yellow",
-    display: "none"
-  }
-
-
   return (
-    <>
-      <header>
-        {/* Renderizamos el NavBar */}
+    <main>
+      <BrowserRouter>
         <NavBar />
-      </header>
+        <Routes>
+          <Route 
+            path="/" 
+            element={<ItemListContainer greeting="Bienvenido a mi tienda" />} 
+          />
+          
+          <Route
+            path="/category/:categParam"  
+            element={<ItemListContainer greeting="Categoria de productos" />}
+          />
 
-      <ItemListContainer greeting="¡Bienvenido a Tienda!" />
+          <Route 
+            path="/cart" 
+            element={<div><h1>Carrito de compras</h1><p>Proceder a comprar</p></div>} 
+          />
 
+          <Route 
+            path="/detalle/:idParam" 
+            element={<ItemDetailContainer />} 
+          />
 
-      <main>
-        <section style={sectionStyles}>
-          <h2>Bienvenido {usuario.name} - ;)</h2>
-          <p>
-            Hola, me llamo {usuario.name} y tengo {usuario.age} años
-          </p>
-          <p>{isUserPaymentOK()}</p>
-        </section>
-
-      </main>
-
-      <footer className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </footer>
-    </>
+          <Route 
+            path="*" 
+            element={<h1>404: Página no encontrada</h1>} 
+          />
+        </Routes>
+      </BrowserRouter>
+    </main>
   );
 }
 

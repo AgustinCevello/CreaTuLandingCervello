@@ -1,9 +1,9 @@
-import ButtonAddToCart from './ButtonAddToCart';
+import ButtonAddToCart from '../ButtonAddToCart';
 import './Item.css';
-import ItemColorPick from './ItemColorPick';
+import ItemColorPick from '../ItemColorPick';
+import { Link } from 'react-router-dom';
 
-
-function Item({ title, img, price, description }) {
+function Item({ id, title, img, price, description }) {
   return(
     <div className="item-card">
       <h3 className="item-card-title">{title}</h3>
@@ -12,6 +12,10 @@ function Item({ title, img, price, description }) {
       <p style={{fontSize:"12px",opacity:"0.8"}}>{description}</p>
       <ButtonAddToCart />
       <hr />
+      {/* Ahora "id" existe y se puede usar aquí */}
+      <Link to={`/detalle/${id}`}> 
+        <button>Ver Detalle</button>         
+      </Link>
       <ItemColorPick />
     </div>
   );

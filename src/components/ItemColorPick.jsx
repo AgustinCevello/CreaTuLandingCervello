@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { useEffect } from 'react';
 function ItemColorPick(){
     
     const [color, setColor] = useState("#6342a8ff");
@@ -16,7 +16,7 @@ function ItemColorPick(){
     return(
         <div>
             <div>
-                <button id="boton-prueba"onClick={() => setColor("#3619dfff")}>Azul</button>
+                <button onClick={() => setColor("#3619dfff")}>Azul</button>
                 <button onClick={() => setColor("#e21d1dff")}>Rojo</button>
                 <button onClick={() => setColor("#3cd10fff")}>Verde</button> 
                 <button onClick={() => setColor("#000000ff")}>Negro</button>
