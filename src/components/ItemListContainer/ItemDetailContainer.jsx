@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { getProdctsById } from "../../data/mockAPI";
 import ItemColorPick from "../ItemColorPick";
 import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import { cartContext } from "../../context/CartContext"; 
 
 function ItemDetailContainer() {
   const { idParam } = useParams();
   const [product, setProduct] = useState({ loading: true });
-
+  const {addItem} = useContext(cartContext);
+  
   useEffect(() => {
     getProdctsById(idParam).then(response => {
       setProduct(response);
@@ -30,7 +33,7 @@ function ItemDetailContainer() {
         {product.description}
       </p>
       <ItemColorPick />
-      <button>Agregar al carrito</button>
+      <button onClick={() => addItem(product)}>Agregar al carrito</button>
       <hr />
     </div>
   );

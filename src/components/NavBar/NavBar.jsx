@@ -9,7 +9,7 @@ function NavBar() {
         <Link to="/">Home</Link>
         <Link to="/category/Hogar">Hogar</Link>
         <Link to="/category/Jardín">Jardín</Link>
-        <Link to="/cart">Carrito</Link>
+        <Link to="/cart"><CartWidget/></Link>
       </nav>
       <CartWidget />
     </header>

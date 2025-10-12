@@ -1,12 +1,10 @@
+import { useContext } from "react";
+import { cartContext } from "../../context/CartContext"; 
+
 function CartWidget() {
-  return (
-    <div className="cart-widget">
-      🛒
-      <span style={{ fontSize: '0.9rem', marginLeft: '5px' }}>
-        0
-      </span>
-    </div>
-  );
+  const {countCartItems} = useContext(cartContext)
+  
+  return <span style={{ color: "black",marginRight: '40px' }}>🛒(1) {countCartItems()}</span>
 }
 
 export default CartWidget;
