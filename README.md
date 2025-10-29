@@ -334,27 +334,62 @@ Las contribuciones son **bienvenidas**. Para cambios importantes:
 5. 🔀 Abre un Pull Request
 \`\`\`
 
+# 🚀 Puesta en Marcha
+
+> Para descargar las dependencias e iniciar el proyecto de forma local, sigue estos sencillos pasos desde la terminal:
+
+---
+
+## 📥 1. Instalar Dependencias
+
+Abre tu terminal en la carpeta raíz del proyecto y ejecuta:
+
+```bash
+npm install
+```
+
+<details>
+<summary>💡 ¿Qué hace este comando?</summary>
+
 <br>
 
-## ⚠️ Notas Importantes
+Este comando descarga e instala todas las dependencias necesarias listadas en el archivo `package.json`, incluyendo React, Firebase, React Router y todas las herramientas de desarrollo.
 
-> **Typos detectados:**
-> - ❌ En `FormCheckout.jsx`: `onCahnge` debería ser `onChange`
-> - ❌ En `FormCheckout.jsx`: `Click` debería ser `onClick`
+</details>
 
-> **Optimizaciones sugeridas:**
-> - 💡 La función `subirProductosAFirestore()` en App.jsx se ejecuta en cada render, considera moverla a un useEffect con dependencias vacías
-> - 💡 El componente usa alertas nativas, considera usar una librería de notificaciones para mejor UX
+---
+
+## ▶️ 2. Ejecutar el Proyecto
+
+Una vez instaladas las dependencias, inicia el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+<details>
+<summary>💡 ¿Qué sucede después?</summary>
 
 <br>
 
-## 🐛 Problemas Conocidos
+Esto abrirá la aplicación en tu navegador en **`http://localhost:5173/`**
 
-| Problema | Impacto |
-|----------|---------|
-| 🔔 Los alerts nativos pueden ser intrusivos | UX |
-| ❌ No hay manejo de errores visuales en la UI | UX |
-| ⚠️ El formulario de checkout tiene errores de tipeo | Funcionalidad |
+Verás un mensaje en la terminal con la URL local donde se está ejecutando tu aplicación. ¡Simplemente haz clic o copia la URL en tu navegador!
+
+</details>
+
+---
+
+### ✅ ¡Listo!
+
+Con estos dos simples pasos, tu aplicación estará corriendo localmente y lista para usar.
+
+---
+
+<div align="center">
+
+**🎉 ¡Disfruta explorando el proyecto! 🎉**
+
 
 <br>
 
@@ -405,20 +440,14 @@ Las contribuciones son **bienvenidas**. Para cambios importantes:
 
 <div align="center">
 
-**Tu Nombre**
+**Cervello Agustín**
 
-[![GitHub](https://img.shields.io/badge/GitHub-@tu--usuario-181717?style=for-the-badge&logo=github)](https://github.com/tu-usuario)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Tu_Perfil-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/tu-perfil)
+[![GitHub](https://img.shields.io/badge/GitHub-@AgustinCervello-181717?style=for-the-badge&logo=github)](https://github.com/tu-usuario)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Tu_Perfil-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/agust%C3%ADn-cervello-b04b37235/)
 
 </div>
 
-<br>
 
-## 📄 Licencia
-
-Este proyecto está bajo la **Licencia MIT** - mira el archivo [LICENSE.md](LICENSE.md) para más detalles.
-
-<br>
 
 ## 🙏 Agradecimientos
 

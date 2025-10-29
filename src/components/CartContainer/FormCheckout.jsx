@@ -32,25 +32,25 @@ export default function FormCheckout(props) {
         <form onSubmit={handleSubmit}>
             <label>Nombre
                 value={formData.username}
-                <input onCahnge={handleInputChange}
+                <input onChange={handleInputChange}
                 type="text" 
                 name="username"/>
             </label>
             <label>Email
                 value={formData.email}
-                <input onCahnge={handleInputChange}
+                <input onChange={handleInputChange}
                 type="email" 
                 name="email"/>
             </label>
             <label>Teléfono
                 value={formData.phone}
-                <input onCahnge={handleInputChange}
+                <input onChange={handleInputChange}
                 onKeyDown={handleNumberInputChange}
                 type="tel" 
                 name="phone"/>
             </label>
             <button type="submit">Enviar</button>
-            <button type="button" Click={resetForm}>Limpiar Form</button>
+            <button type="button" onClick={resetForm}>Limpiar Form</button>
 
         </form>
     )

@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getDocs, collection, doc, getDoc, query, where, addDoc } from "firebase/firestore";
-import products from "./products";
+//import products from "./products";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAWggrQrmG4QlYzqntt5U61QzmdNk8UWmY",
@@ -59,12 +59,12 @@ export async function createOrder(orderData) {
   return newDoc.id;
 }
 
-export async function subirProductosAFirestore(){
-  for(let item of products){
-    delete item.id;
-    const newDoc=await addDoc(collection(db,"products"),item)
-    console.log("item created",newDoc.id)
-  }
-}
+//export async function subirProductosAFirestore(){
+//  for(let item of products){
+//    delete item.id;
+//    const newDoc=await addDoc(collection(db,"products"),item)
+//    console.log("item created",newDoc.id)
+//  }
+//}
 
 export default app;
