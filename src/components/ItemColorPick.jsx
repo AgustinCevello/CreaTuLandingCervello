@@ -21,8 +21,9 @@ function ItemColorPick(){
                 <button onClick={() => setColor("#3cd10fff")}>Verde</button> 
                 <button onClick={() => setColor("#000000ff")}>Negro</button>
             </div>
-            <p>Color seleccionado:</p>
+            <p>Color seleccionado:
                 <span style={{ backgroundColor: color, height:"10px", width:"10px", display: "inline-block"}}></span>
+            </p>
         </div>
     );
 }

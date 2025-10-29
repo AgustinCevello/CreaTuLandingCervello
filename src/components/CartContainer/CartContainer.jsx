@@ -67,7 +67,6 @@ function CartContainer(){
 
             <button onClick={clearCart}>Vaciar carrito</button>
             <button onClick={handleCheckout}>Confirmar compra</button>
-            <Link to="/checkout"><button>Proceder a pagar</button></Link>
             
             <FormCheckout handleCheckout={handleCheckout}/>
 
