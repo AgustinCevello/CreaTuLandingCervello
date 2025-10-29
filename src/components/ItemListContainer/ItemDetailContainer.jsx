@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { getProdctsById } from "../../data/mockAPI";
+import { getProductById } from "../../data/firebase";
 import ItemColorPick from "../ItemColorPick";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { cartContext } from "../../context/CartContext"; 
+import ItemCount from "./ItemCount";
 
 function ItemDetailContainer() {
   const { idParam } = useParams();
@@ -11,7 +12,7 @@ function ItemDetailContainer() {
   const {addItem} = useContext(cartContext);
   
   useEffect(() => {
-    getProdctsById(idParam).then(response => {
+    getProductById(idParam).then(response => {
       setProduct(response);
     });
   }, [idParam]);
@@ -20,21 +21,19 @@ function ItemDetailContainer() {
     return <h2>Cargando...</h2>;
   }
 
+  function handleAddToCart(count) {
+    addItem(product, count)
+  }
+
   return (
     <div className="item-card">
       <h3 className="item-card-title">{product.title}</h3>
-      <img
-        className="item-card-img"
-        src={product.img}
-        alt={product.title}
-      />
+      <img className="item-card-img" src={product.img} alt={product.title}/>
       <p className="item-card-price">Precio: {product.price}</p>
-      <p style={{ fontSize: "12px", opacity: "0.6" }}>
-        {product.description}
-      </p>
+      <p style={{ fontSize: "12px", opacity: "0.6" }}> {product.description} </p>
       <ItemColorPick />
-      <button onClick={() => addItem(product)}>Agregar al carrito</button>
-      <hr />
+      
+      <ItemCount max={product.stock} min={1} onAddToCart={handleAddToCart} />
     </div>
   );
 }

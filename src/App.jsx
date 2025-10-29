@@ -5,9 +5,10 @@ import ItemDetailContainer from "./components/ItemListContainer/ItemDetailContai
 import "./App.css";
 import { CartProvider } from "./context/CartContext";
 import CartContainer from "./components/CartContainer/CartContainer";
+import {subirProductosAFirestore} from "./data/firebase";
 
 function App() {
-
+  subirProductosAFirestore();
   return (
     <main>
       <CartProvider>

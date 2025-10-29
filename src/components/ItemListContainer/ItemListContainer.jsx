@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { getProducts, getProductsByCategory } from "../../data/firebase";
 import Item from "./Item";
-import { getProducts, getProductsByCategory } from "../../data/mockAPI.js";
+import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
+import { useParams } from "react-router";
 
 function ItemListContainer(props) {
   const [products, setProducts] = useState([]);
