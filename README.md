@@ -222,8 +222,7 @@ El carrito de compras está gestionado mediante **Context API**, proporcionando 
 
 **1️⃣ Clona el repositorio**
 \`\`\`bash
-git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
+git clone https://github.com/AgustinCevello/CreaTuLandingCervello.git
 \`\`\`
 
 **2️⃣ Instala las dependencias**
@@ -442,7 +441,7 @@ Con estos dos simples pasos, tu aplicación estará corriendo localmente y lista
 
 **Cervello Agustín**
 
-[![GitHub](https://img.shields.io/badge/GitHub-@AgustinCervello-181717?style=for-the-badge&logo=github)](https://github.com/tu-usuario)
+[![GitHub](https://img.shields.io/badge/GitHub-@AgustinCervello-181717?style=for-the-badge&logo=github)](https://github.com/AgustinCevello)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Tu_Perfil-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/agust%C3%ADn-cervello-b04b37235/)
 
 </div>

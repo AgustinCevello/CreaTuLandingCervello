@@ -5,7 +5,7 @@ function ItemColorPick(){
     const [color, setColor] = useState("#6342a8ff");
     
     console.log("Renderizando componente <ItemColorPick>");
-    // eslint-disable-next-line no-undef
+    
     useEffect(() => {
         console.warn("tarea compleja/conexiones a servicios/fetch de apis")
         //const botonPrueba = document.getElementById("boton-prueba");
