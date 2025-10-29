@@ -1,12 +1,12 @@
 import { useContext, useState } from "react"
-import { cartContext } from "../../context/CartContext"
+import { CartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom" 
 import { createOrder } from "../../data/firebase"
 import FormCheckout from "./FormCheckout"
 
 function CartContainer(){
     const [orderCreatedId, setOrderCreated] = useState(false);
-    const {cartItems, removeItem, countTotalPrice, clearCart, removeUnitFromItem} = useContext(cartContext)
+    const {cartItems, removeItem, countTotalPrice, clearCart, removeUnitFromItem} = useContext(CartContext)
     
     async function handleCheckout(){ 
         const buyer = {name:"lucy", email:"lu@gmail.com", phone:"123456789"}

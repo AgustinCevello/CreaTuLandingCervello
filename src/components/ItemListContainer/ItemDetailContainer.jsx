@@ -3,13 +3,13 @@ import { getProductById } from "../../data/firebase";
 import ItemColorPick from "../ItemColorPick";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { cartContext } from "../../context/CartContext"; 
+import { CartContext } from "../../context/CartContext"; 
 import ItemCount from "./ItemCount";
 
 function ItemDetailContainer() {
   const { idParam } = useParams();
   const [product, setProduct] = useState({ loading: true });
-  const {addItem} = useContext(cartContext);
+  const {addItem} = useContext(CartContext);
   
   useEffect(() => {
     getProductById(idParam).then(response => {

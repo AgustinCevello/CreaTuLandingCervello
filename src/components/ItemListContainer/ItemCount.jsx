@@ -9,7 +9,7 @@ export default function ItemCount({ max, min, onAddToCart }) {
   return (
     <div>
       <button onClick={handleSubtract}>-</button>
-      <span>{count}</span>
+      <span style={{ color: 'black' }}>{count}</span>
       <button onClick={handleAdd}>+</button>
       <button onClick={() => onAddToCart(count)}>Agregar</button>
     </div>

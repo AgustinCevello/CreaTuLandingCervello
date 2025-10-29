@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { cartContext } from "../../context/CartContext"; 
+import { CartContext } from "../../context/CartContext"; 
 
 function CartWidget() {
-  const { countCartItems } = useContext(cartContext)
+  const { countCartItems } = useContext(CartContext)
   
   return (
     <span style={{ color: "black",marginRight: '40px' }}>
