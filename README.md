@@ -62,7 +62,7 @@ Este proyecto es una **simulación completa de un e-commerce** desarrollado como
 
 ## 🚀 Demo
 
-> [Aquí puedes agregar el link a tu deploy si lo tienes en Vercel/Netlify]
+> https://miecomerce.netlify.app/
 
 <br>
 
